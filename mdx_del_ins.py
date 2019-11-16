@@ -22,7 +22,7 @@ Usage
 Dependencies
 ------------
 
-* [Markdown 2.0+](http://www.freewisdom.org/projects/python-markdown/)
+* [Markdown 3](https://pypi.org/project/Markdown/)
 
 
 Copyright
@@ -47,14 +47,14 @@ INS_RE = r"(\+\+)(.+?)(\+\+)"
 class DelInsExtension(markdown.extensions.Extension):
     """Adds del_ins extension to Markdown class."""
 
-    def extendMarkdown(self, md, md_globals):
+    def extendMarkdown(self, md):
         """Modifies inline patterns."""
         md.inlinePatterns.add('del', SimpleTagPattern(DEL_RE, 'del'), '<not_strong')
         md.inlinePatterns.add('ins', SimpleTagPattern(INS_RE, 'ins'), '<not_strong')
 
 
-def makeExtension(configs={}):
-    return DelInsExtension(configs=dict(configs))
+def makeExtension(**kwargs):
+    return DelInsExtension(**kwargs)
 
 
 if __name__ == "__main__":

@@ -7,7 +7,7 @@ Wraps the inline content with `ins` and `del` tags.
 Installation
 ------------
 
-    pip install git+git://github.com/aleray/mdx_del_ins.git
+    pip install git+git://github.com/CreepaShadowz/mdx_del_ins.git
 
 
 Usage
@@ -24,7 +24,7 @@ Usage
 Dependencies
 ------------
 
-* [Markdown 2.0+](http://www.freewisdom.org/projects/python-markdown/)
+* [Markdown 3](https://pypi.org/project/Markdown/)
 
 
 Copyright
