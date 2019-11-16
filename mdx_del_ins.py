@@ -40,8 +40,8 @@ import markdown
 from markdown.inlinepatterns import SimpleTagPattern
 
 
-DEL_RE = r"(\~\~)(.+?)(\~\~)"
-INS_RE = r"(\+\+)(.+?)(\+\+)"
+DEL_RE = r"(\~\~)(\S(?:.*?\S)?)(\~\~)"
+INS_RE = r"(\+\+)(\S(?:.*?\S)?)(\+\+)"
 
 
 class DelInsExtension(markdown.extensions.Extension):
