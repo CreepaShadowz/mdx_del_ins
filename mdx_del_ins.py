@@ -39,9 +39,17 @@ See LICENSE.md for details.
 import markdown
 from markdown.inlinepatterns import SimpleTagPattern
 
-
-DEL_RE = r"(\~\~)(\S(?:.*?\S)?)(\~\~)"
-INS_RE = r"(\+\+)(\S(?:.*?\S)?)(\+\+)"
+# Matches:
+# ~~ (literal)
+# any character that isn't white space or a ~
+# Any character (except ~) OR a ~ that isn't followed by another ~, matching as many characters as required (lazy)
+# any character that isn't white space or a ~
+# ~~ (literal)
+# INS uses +s instead of ~s
+DEL_RE = r"(\~\~)([^\s\~](?:(?:[^\~]|\~(?!\~))*?[^\s~])?)(\~\~)"
+INS_RE = r"(\+\+)([^\s\+](?:(?:[^\+]|\+(?!\+))*?[^\s+])?)(\+\+)"
+# r"(\~\~)(\S(?:.*?\S)?)(\~\~)"
+# r"(\~\~)([^\s~](?:.*?[^\s~])?)(\~\~)"
 
 
 class DelInsExtension(markdown.extensions.Extension):

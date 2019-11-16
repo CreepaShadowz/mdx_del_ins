@@ -6,7 +6,7 @@ from setuptools import setup
 
 setup(
     name='mdx_del_ins',
-    version='2.1',
+    version='2.1.1',
     author='Alexandre Leray',
     author_email='alexandre@stdin.fr',
     description='Python-Markdown extension to support the <del> and <ins> tags.',
