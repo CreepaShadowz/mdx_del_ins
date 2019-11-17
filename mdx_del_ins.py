@@ -46,8 +46,8 @@ from markdown.inlinepatterns import SimpleTagPattern
 # any character that isn't white space or a ~
 # ~~ (literal)
 # INS uses +s instead of ~s
-DEL_RE = r"(\~\~)([^\s\~](?:(?:[^\~]|\~(?!\~))*?[^\s~])?)(\~\~)"
-INS_RE = r"(\+\+)([^\s\+](?:(?:[^\+]|\+(?!\+))*?[^\s+])?)(\+\+)"
+DEL_RE = r"(\~\~)([^\s\~](?:(?:[^\~]|\~(?!\~))*?[^\s\~])?)(\~\~)"
+INS_RE = r"(\+\+)([^\s\+](?:(?:[^\+]|\+(?!\+))*?[^\s\+])?)(\+\+)"
 # r"(\~\~)(\S(?:.*?\S)?)(\~\~)"
 # r"(\~\~)([^\s~](?:.*?[^\s~])?)(\~\~)"
 
